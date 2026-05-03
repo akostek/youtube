@@ -11,3 +11,5 @@ backend/ffmpeg.exe
 backend/storage/
 backend/bin/
 backend/obj/
+backend/appsettings.json
+backend/appsettings.Development.json
