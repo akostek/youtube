@@ -134,7 +134,7 @@ public class AiGenerationService
 
     public async Task<List<string>> GenerateTagsAsync(Script script)
     {
-        var sys = "Sen bir YouTube SEO uzmanısın. Verilen senaryoya en uygun, arama hacmi yüksek 15 adet YouTube etiketini (tag) üret. Kelimeler boşluk içerebilir. Çıktını SADECE bir JSON listesi olarak ver. Örnek: [\"hacamat nasıl yapılır\", \"sağlık\", \"sırt ağrısı\"]";
+        var sys = "Sen bir YouTube SEO uzmanısın. Verilen senaryonun DİLİNİ (Türkçe, İngilizce, vb.) otomatik algıla ve üreteceğin etiketleri KESİNLİKLE senaryonun Orijinal Dilinde üret! (Eğer senaryo İngilizce ise etiketler de İngilizce olmalı). Arama hacmi yüksek 15 adet YouTube etiketini (tag) üret. Çıktını SADECE bir JSON listesi olarak ver. Örnek TR: [\"hacamat\", \"sağlık\"] Örnek EN: [\"cupping therapy\", \"health\", \"back pain\"]";
         var prompt = $"Senaryo Başlığı: {script.Title}\nSenaryo Metni: {script.Content}";
 
         var jsonRes = await CallOpenAiAsync(sys, prompt);
