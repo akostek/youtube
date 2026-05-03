@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+.env
+*.log
+*.mp4
+*.mp3
+*.zip
+.DS_Store
+backend/ffmpeg.exe
+backend/storage/
+backend/bin/
+backend/obj/
